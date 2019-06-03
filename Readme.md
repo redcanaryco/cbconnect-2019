@@ -10,8 +10,10 @@ To solve interesting security problems with a DIY-SOAR framework.
 
 ## Getting started
 
+If you do not have Docker Desktop installed, [install it now](https://www.docker.com/products/docker-desktop).
+
 ```bash
-git clone git@github.com:redcanaryco/cbconnect-2019.git
+git clone https://github.com/redcanaryco/cbconnect-2019.git
 cd cbconnect-2019
 docker-compose build
 docker-compose up
