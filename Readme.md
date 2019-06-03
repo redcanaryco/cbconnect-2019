@@ -11,6 +11,8 @@ To solve interesting security problems with a DIY-SOAR framework.
 ## Getting started
 
 ```bash
+git clone git@github.com:redcanaryco/cbconnect-2019.git
+cd cbconnect-2019
 docker-compose build
 docker-compose up
 ```
