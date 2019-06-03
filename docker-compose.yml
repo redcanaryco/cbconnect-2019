@@ -1,0 +1,20 @@
+version: '3'
+services:
+  sidekiq-container:
+    build:
+      context: .
+    command: ["bundle", "exec", "sidekiq", "-r", "/app/app/main.rb"]
+    environment:
+      - REDIS_PROVIDER=REDIS_URL
+      - REDIS_URL=redis://redis-container
+      - DEMO_MODE=true
+    volumes:
+      - .:/app
+    depends_on:
+      - redis-container
+
+  redis-container:
+    image: redis:3.2.8
+    expose:
+      - 6379
+
