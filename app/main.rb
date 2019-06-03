@@ -13,7 +13,6 @@ Sidekiq.logger.formatter = SidekiqLogger.new
 
 # Clear our job queue since this isn't a production thing
 Sidekiq::Queue.new.clear
-puts "#{Sidekiq::Queue.new.count} jobs"
 
 #
 # Run our playbook!
